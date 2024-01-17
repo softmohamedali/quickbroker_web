@@ -75,7 +75,7 @@ class JoinUsCompanyView extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 200),
                     width:ScreenUtil.getScreenWidth(context),
                     height: ScreenUtil.getScreenHeight(context)*0.8,
-                    child:JoinUsCompanyStep2(),
+                    child:JoinUsCompanyStep1(),
                   ),
                 ),
               ),

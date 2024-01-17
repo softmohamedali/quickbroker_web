@@ -25,7 +25,7 @@ class CheakBoxWithTilte extends StatelessWidget {
                 ),
               ],
               borderRadius: BorderRadius.circular(8.0),
-              color: isChecked ? AppColors.activeColor : AppColors.baseColor,
+              color: AppColors.baseColor,
               border: Border.all(
                 color: isChecked ? AppColors.activeColor :  AppColors.baseColor,
                 width: 2.0,
@@ -35,7 +35,7 @@ class CheakBoxWithTilte extends StatelessWidget {
                 value: isChecked,
                 onChanged: (valur){},
                 checkColor:AppColors.activeColor,
-                activeColor:AppColors.activeColor,
+                activeColor:AppColors.baseColor,
                 focusColor:AppColors.baseColor,
               side: BorderSide.none,
 

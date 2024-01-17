@@ -2,8 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:quickbroker/presentation/screens/others/create_company_account/create_company_account_view.dart';
 
 import '../../../../core/utils/screen_size.dart';
+import '../../others/create_account_selection/create_account_selection_view.dart';
+import '../../others/create_code/create_code_company_view.dart';
 import '../../others/joinus_company/joinus_company_view.dart';
 import '../../others/personalaccount/personal_account_view.dart';
 
@@ -57,7 +60,7 @@ class JonUsView extends StatelessWidget {
                           child: InkWell(
                             onTap: ()
                               {
-                                Get.to(JoinUsCompanyView());
+                                Get.to(CreateAccountTypeSelectionView());
                               },
                               child: Text(
                         "JonUsView",

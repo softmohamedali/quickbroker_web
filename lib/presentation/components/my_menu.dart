@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../../core/utils/constants.dart';
 
 class MyMenu extends StatelessWidget {
-  const MyMenu({super.key});
+  String? hint;
+   MyMenu({super.key,this.hint});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class MyMenu extends StatelessWidget {
             child: DropdownButton<String>(
               isExpanded: true, // Ensure the dropdown button takes full width
               hint: Text(
-                "", // Set your hint text
+                hint??"", // Set your hint text
                 style: TextStyle(fontSize: 10,color: Colors.grey[400]),
               ),
               dropdownColor: Colors.transparent, // Set dropdown background color

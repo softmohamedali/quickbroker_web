@@ -67,9 +67,12 @@ class PersonalAccountView extends StatelessWidget {
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Full name".tr,
-                              style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                            Container(
+                              width: 200,
+                              child: Text(
+                                "Full name".tr,
+                                style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                              ),
                             ),
                             SizedBox(width: 50.0),
                             Expanded(
@@ -117,14 +120,17 @@ class PersonalAccountView extends StatelessWidget {
                             Expanded(
                               child: Row(
                                 children: [
-                                  Text(
-                                    "Nationality".tr,
-                                    style:TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                  Container(
+                                    width: 200,
+                                    child: Text(
+                                      "Nationality".tr,
+                                      style:TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                   SizedBox(width: 32.0),
-                                  Expanded(
-                                    flex: 3,
-                                    child:  MyTextField(),
+                                  Container(
+                                      width: 400,
+                                      child: MyTextField()
                                   ),
                                 ],
                               ),
@@ -133,9 +139,12 @@ class PersonalAccountView extends StatelessWidget {
                             Expanded(
                               child: Row(
                                 children: [
-                                  Text(
-                                    "Contact no".tr,
-                                    style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                  Container(
+                                    width: 200,
+                                    child: Text(
+                                      "Contact no".tr,
+                                      style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                   SizedBox(width: 32.0),
                                   Flexible(
@@ -156,14 +165,17 @@ class PersonalAccountView extends StatelessWidget {
                             Expanded(
                               child: Row(
                                 children: [
-                                  Text(
-                                    "Gender".tr,
-                                    style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                  Container(
+                                    width:200,
+                                    child: Text(
+                                      "Gender".tr,
+                                      style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                   SizedBox(width: 32.0),
-                                  Expanded(
-                                    flex: 3,
-                                    child:  MyTextField(),
+                                  Container(
+                                    width: 400,
+                                      child: MyTextField()
                                   ),
                                 ],
                               ),
@@ -172,9 +184,12 @@ class PersonalAccountView extends StatelessWidget {
                             Expanded(
                               child: Row(
                                 children: [
-                                  Text(
-                                    "Birthday".tr,
-                                    style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                  Container(
+                                    width:200,
+                                    child: Text(
+                                      "Birthday".tr,
+                                      style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                   SizedBox(width: 32.0),
                                   Container(
@@ -198,43 +213,110 @@ class PersonalAccountView extends StatelessWidget {
                         ),
                         SizedBox(height: 32.0),
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Email".tr,
-                              style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                            Column(
+                              children: [
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      width:200,
+                                      child: Text(
+                                        "Email".tr,
+                                        style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    SizedBox(width: 32.0),
+                                    Container(
+                                        width: 400,
+                                        child: MyTextField()
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 32.0),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      width:200,
+                                      child: Text(
+                                        "Confirm email".tr,
+                                        style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    SizedBox(width: 32.0),
+                                    Container(
+                                        width: 400,
+                                        child: MyTextField()
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 32.0),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      width:200,
+                                      child: Text(
+                                        "Are you an employee or a student".tr,
+                                        style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                    SizedBox(width: 32.0),
+                                    CheakBoxWithTilte(title: "Employee".tr,isChecked:true),
+                                    SizedBox(width: 16.0),
+                                    CheakBoxWithTilte(title:"Student".tr,isChecked:false)
+                                  ],
+                                ),
+                                SizedBox(height: 80.0),
+                              ],
                             ),
-                            SizedBox(width: 32.0),
-                            Expanded(child:  MyTextField(),),
+                            Expanded(child: SizedBox()),
+                            Padding(
+                              padding: const EdgeInsets.all(40),
+                              child: Container(
+                                padding: EdgeInsets.all(8),
+                                width: 300,
+                                height: 250,
+                                decoration: BoxDecoration(
+                                  color:AppColors.secondryColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.4), // shadow color
+                                      spreadRadius: 1,
+                                      blurRadius:11,
+                                      offset: Offset(0, 8),
+                                    ),
+                                  ],
+                                  borderRadius: BorderRadius.circular(15),
+                                  border: Border.all(
+                                    color: Colors.transparent,
+                                    width: 0,
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Specialist".tr,
+                                      style: TextStyle(fontSize:15,color: AppColors.baseColor),
+                                    ),
+                                    Text(
+                                      "Name of your Organization".tr,
+                                      style: TextStyle(fontSize:15,color: AppColors.baseColor),
+                                    ),
+                                    Text(
+                                      "Working hours".tr,
+                                      style: TextStyle(fontSize:15,color: AppColors.baseColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Expanded(child: SizedBox()),
                           ],
                         ),
-                        SizedBox(height: 32.0),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Confirm email".tr,
-                              style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(width: 32.0),
-                            Expanded(child:  MyTextField(),),
-                          ],
-                        ),
-                        SizedBox(height: 32.0),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Are you an employee or a student".tr,
-                              style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(width: 32.0),
-                            CheakBoxWithTilte(title: "Employee".tr,isChecked:true),
-                            SizedBox(width: 16.0),
-                            CheakBoxWithTilte(title:"Student".tr,isChecked:false)
-                          ],
-                        ),
-                        SizedBox(height: 50.0),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -242,9 +324,12 @@ class PersonalAccountView extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  "Password".tr,
-                                  style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                Container(
+                                  width:200,
+                                  child: Text(
+                                    "Password".tr,
+                                    style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 SizedBox(width: 32.0),
                                 Container(
@@ -257,9 +342,12 @@ class PersonalAccountView extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  "Confirm Password".tr,
-                                  style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                Container(
+                                  width:200,
+                                  child: Text(
+                                    "Confirm Password".tr,
+                                    style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 SizedBox(width: 32.0),
                                 Container(

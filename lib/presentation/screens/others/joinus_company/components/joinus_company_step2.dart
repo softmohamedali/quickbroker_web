@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quickbroker/core/utils/screen_size.dart';
 
+import '../../../../components/cheakbox_title.dart';
 import '../../../../components/my_menu.dart';
 import '../../../../components/mytext_field.dart';
 import '../../../../ui/MyColors.dart';
@@ -94,13 +95,14 @@ class JoinUsCompanyStep2 extends StatelessWidget {
                     ),
                     SizedBox(height: 30.0),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            SizedBox(width: 32.0),
+                            CheakBoxWithTilte(isChecked: true,),
+                            SizedBox(width: 20.0),
                             Container(
                               width: 300,
                               child: Text(
@@ -108,7 +110,8 @@ class JoinUsCompanyStep2 extends StatelessWidget {
                                 style: TextStyle(color: AppColors.activeColor,fontWeight: FontWeight.bold),
                               ),
                             ),
-                            SizedBox(width: 32.0),
+                            CheakBoxWithTilte(isChecked: true,),
+                            SizedBox(width: 20.0),
                             Container(
                               width: 300,
                               child: Text(
@@ -121,9 +124,10 @@ class JoinUsCompanyStep2 extends StatelessWidget {
                         ),
                         SizedBox(height: 20.0),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            SizedBox(width: 32.0),
+                            CheakBoxWithTilte(isChecked: true,),
+                            SizedBox(width: 20.0),
                             Container(
                               width: 300,
                               child: Text(

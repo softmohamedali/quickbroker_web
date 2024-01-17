@@ -89,10 +89,10 @@ class HomeFotter extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width:150,
-                  height: 150,
+                  width:200,
+                  height: 160,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       InkWell(
                         onTap: (){},
@@ -111,11 +111,13 @@ class HomeFotter extends StatelessWidget {
                         children: [
                           InkWell(
                               onTap: (){},
-                              child: SvgPicture.asset("icons/face.svg")
+                              child: Container(
+                                  child: SvgPicture.asset("icons/face.svg")
+                              )
                           ),
                           InkWell(
                               onTap: (){},
-                              child: SvgPicture.asset("icons/linked.svg")
+                              child: SvgPicture.asset("icons/link.svg")
                           ),
                           InkWell(
                               onTap: (){},
@@ -146,7 +148,7 @@ class HomeFotter extends StatelessWidget {
                           ),
                           InkWell(
                               onTap: (){},
-                              child: SvgPicture.asset("icons/inst.svg")
+                              child: SvgPicture.asset("icons/insta.svg")
                           ),
                         ],
                       ),
@@ -238,10 +240,10 @@ class HomeFotter extends StatelessWidget {
                 height: ScreenUtil.getScreenWidth(context)*0.3,
               ),
               Container(
-                width:150,
-                height: 150,
+                width:200,
+                height: 160,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     InkWell(
                       onTap: (){},
@@ -264,7 +266,7 @@ class HomeFotter extends StatelessWidget {
                         ),
                         InkWell(
                             onTap: (){},
-                            child: SvgPicture.asset("icons/linked.svg")
+                            child: SvgPicture.asset("icons/link.svg")
                         ),
                         InkWell(
                             onTap: (){},
@@ -295,7 +297,7 @@ class HomeFotter extends StatelessWidget {
                         ),
                         InkWell(
                             onTap: (){},
-                            child: SvgPicture.asset("icons/inst.svg")
+                            child: SvgPicture.asset("icons/insta.svg")
                         ),
                       ],
                     ),

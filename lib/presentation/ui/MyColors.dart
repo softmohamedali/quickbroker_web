@@ -7,6 +7,7 @@ class AppColors {
   // static Color activeColor = Color(0xFF4072af);
   static Color activeColor = Color(0xff352975);
   static Color secondryColor = Color(0xff369bd1);
+  static Color onBackGround = Color(0xffeaedf0);
   // static Color darkTextColor = Color(0xFF102d4d);
   static Color textColor = Colors.black;
   static Color secTextColor = Colors.grey;

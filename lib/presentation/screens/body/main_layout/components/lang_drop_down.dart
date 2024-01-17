@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:quickbroker/core/utils/controller.dart';
+import 'package:quickbroker/presentation/screens/user/login/login_view.dart';
+import 'package:quickbroker/presentation/screens/user/logout/logout_view.dart';
 
 import '../../../../../core/utils/constants.dart';
+import '../../../others/commission_markter/commission_markter_step1.dart';
 
 
 class LangMenu extends StatelessWidget {
@@ -50,7 +56,11 @@ class LangMenu extends StatelessWidget {
                   style: TextStyle(color: Colors.grey[400]), // Hint text style
                 ),
                 dropdownColor: Colors.transparent, // Set dropdown background color
-                items: <String>['Item 1', 'Item 2', 'Item 3'] // Add your dropdown items
+                items: <String>[
+                  'log in ', 'log out', 'forget password','create account',"loading",'thanks','commission markter',
+                  'CreateCodeCompanyView',
+                  'JoinUsCompanyView',
+                ] // Add your dropdown items
                     .map((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -58,7 +68,46 @@ class LangMenu extends StatelessWidget {
                   );
                 }).toList(),
                 onChanged: (String? newValue) {
-                  // Handle dropdown value change
+                  switch(newValue){
+                    case'log in ' :{
+                      controller.jumpToPage(7)  ;
+                    }
+                    break;
+                    case'log out' :{
+                      controller.jumpToPage(8)  ;
+                    }
+                    break;
+                    case'forget password' :{
+                      controller.jumpToPage(9)  ;
+                    }
+                    break;
+                    case'create account' :{
+                      controller.jumpToPage(10)  ;
+                    }
+                    break;
+                    case'loading' :{
+                      controller.jumpToPage(11)  ;
+                    }
+                    break;
+                    case'thanks' :{
+                      controller.jumpToPage(12)  ;
+                    }
+                    break;
+                    case'commission markter':{
+                      Get.to(CommissionMarkterStep1());
+                    }
+                    break;
+                    case'CreateCodeCompanyView':{
+                      controller.jumpToPage(14)  ;
+                    }
+                    break;
+                    case'JoinUsCompanyView':{
+                      controller.jumpToPage(15)  ;
+                    }
+                    break;
+
+
+                  }
                 },
                 style: TextStyle(color: Colors.white), // Set dropdown text color
               ),
